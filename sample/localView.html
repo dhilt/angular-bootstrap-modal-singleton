@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="application">
+<head>
+	<meta charset="utf-8">
+	<title>Scroller Demo (entire window)</title>
+	<script src="out/angular.js"></script>
+	<script src="out/ui-bootstrap.min.js"></script>
+	<script src="out/ui-bootstrap-tpls.min.js"></script>
+	<script src="../modalDialogService.js"></script>
+	<script src="localCtrl.js"></script>
+
+	<link href="out/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body ng-controller="mainController as mainCtrl">
+
+	<button ng-click="showSomeDialog()">
+		Some Dialog
+	</button>
+
+	<br>
+
+	<button ng-click="confirm()">
+		Confirm
+	</button>
+
+</body>
+</html>
