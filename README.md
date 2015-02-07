@@ -7,4 +7,6 @@ So one of the main reason for undestroyable $modal factory usage is the memory l
 
 ![alt tag](https://raw.githubusercontent.com/dhilt/angular-bootstrap-modal-singleton/master/leaks.png)
 
+At last here is some related ui.bootstrap issue [$modal leaking DOM](https://github.com/angular-ui/bootstrap/issues/2875) which is not closed by the moment.
+
 dhilt, 2015
