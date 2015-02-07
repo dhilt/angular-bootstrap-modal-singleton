@@ -1,4 +1,6 @@
-hill30Module.factory 'modalDialogs', ['$modal', '$document', '$templateCache', 	($modal, $document, $templateCache) ->
+angular.module("angular-bootstrap-modal-singleton", [])
+
+.factory 'modalDialogs', ['$modal', '$document', '$templateCache', 	($modal, $document, $templateCache) ->
 
 	dialogList = []
 
@@ -9,25 +11,24 @@ hill30Module.factory 'modalDialogs', ['$modal', '$document', '$templateCache', 	
 	modalBackdropZIndex = null
 
 	getTemplate = (self) ->
-		'
-				<div>
-					<div class="modal-header">
-						<h4><span class="glyphicon {{uiData.iconClass}}"></span>
-							{{uiData.title}}
-						</h4>
-					</div>
+		'<div>
+			<div class="modal-header">
+				<h4><span class="glyphicon {{uiData.iconClass}}"></span>
+					{{uiData.title}}
+				</h4>
+			</div>
 
-					<div class="modal-body">' + $templateCache.get(self.id + commonTemplateId) + '</div>
+			<div class="modal-body">' + $templateCache.get(self.id + commonTemplateId) + '</div>
 
-					<div class="modal-footer text-center">
-						<span ng-repeat="action in uiData.actions">
-							<button class="btn {{action.btnClass}}" ng-click="action.do()">
-								<span class="glyphicon {{action.iconClass}}" ng-show="action.iconClass"></span>
-								{{action.caption}}
-							</button>
-						</span>
-					</div>
-				</div>'
+			<div class="modal-footer text-center">
+				<span ng-repeat="action in uiData.actions">
+					<button class="btn {{action.btnClass}}" ng-click="action.do()">
+						<span class="glyphicon {{action.iconClass}}" ng-show="action.iconClass"></span>
+						{{action.caption}}
+					</button>
+				</span>
+			</div>
+		</div>'
 
 
 	configure = (configObj) ->
